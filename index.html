@@ -20,13 +20,210 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="js/site.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+      var map;
+      function initialize() {
+        var mapOptions = {
+          zoom: 8,
+          center: new google.maps.LatLng(-34.397, 150.644)
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
   </head>
   <body>
+  <!-- overlay -->
+    <div id="hi-hotel-info" class="overlay modal fade">
+      <div class="btn btn-lg btn-info close-detail" data-dismiss="modal">&times;</div>
+      <div class="info-container">
+        <div class="container-fluid">
+          <div class="detail-info col-xs-12">
+            <div id="detail-container" class="container-fluid">
+
+              <div id="map-container" class="col-xs-12 col-md-6">
+                <div id="map-canvas"></div>
+              </div>
+              <div class="col-xs-12 col-md-6">
+
+                <h3 class="font-light">Centra Taum Seminyak Bali</h3>
+                <div class="panel-group" id="hi-hotel-detail">
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#hi-hotel-detail" href="#location-and-details">
+                          Location and details
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="location-and-details" class="panel-collapse collapse in">
+                      <div class="panel-body">
+
+                        <div class="detail-item-list">
+                          <div class="detail-item title font-bold">Address</div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Coordinates</div>
+                            <div class="col-sm-6 body">37-39 Lebaksari Street, Petitenget Kuta Utara, Badung, 80361, Bali, ID</div>
+                          </div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Public transportations</div>
+                            <div class="col-sm-6 body">Bali Ngurah Rai International Airport airport 9 km</div>
+                          </div>
+                        </div>
+
+                        <div class="detail-item-list">
+                          <div class="detail-item title font-bold">Information</div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Reception is open</div>
+                            <div class="col-sm-6 body">24h/24</div>
+                          </div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Check-in from</div>
+                            <div class="col-sm-6 body">14:00</div>
+                          </div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Check-out before</div>
+                            <div class="col-sm-6 body">12:00</div>
+                          </div>
+                        </div>
+
+                        <div class="detail-item-list">
+                          <div class="detail-item title font-bold">Nearby</div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Canggu Club</div>
+                            <div class="col-sm-6 body">1km</div>
+                          </div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Legian Beach</div>
+                            <div class="col-sm-6 body">1km</div>
+                          </div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Petitenget Beach</div>
+                            <div class="col-sm-6 body">1km</div>
+                          </div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Petitenget Temple</div>
+                            <div class="col-sm-6 body">1km</div>
+                          </div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Seminyak Square</div>
+                            <div class="col-sm-6 body">1km</div>
+                          </div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Bali Nusa Dua and Bali International Convention Center</div>
+                            <div class="col-sm-6 body">10km</div>
+                          </div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Garuda Wisnu Kencana Monument</div>
+                            <div class="col-sm-6 body">10km</div>
+                          </div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Kuta Beach</div>
+                            <div class="col-sm-6 body">10km</div>
+                          </div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Tanah Lot</div>
+                            <div class="col-sm-6 body">10km</div>
+                          </div>
+                          <div class="detail-item row">
+                            <div class="col-sm-6 head">Uluwatu Temple</div>
+                            <div class="col-sm-6 body">10km</div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#hi-hotel-detail" href="#equipments">
+                          Equipments
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="equipments" class="panel-collapse collapse">
+                      <div class="panel-body">
+
+                        <div class="detail-item-list row">
+                          <div class="detail-item col-sm-6">
+                            <div class="head">Amenities</div>
+                            <ul class="body">
+                              <li>Patio - garden</li>
+                              <li>Fitness equipment</li>
+                              <li>Outdoor swimming pool</li>
+                              <li>Spa</li>
+                            </ul>
+                          </div>
+                          <div class="detail-item col-sm-6">
+                            <div class="head">General</div>
+                            <ul class="body">
+                              <li>Elevators</li>
+                            </ul>
+                          </div>
+                          <div class="detail-item col-sm-6">
+                            <div class="head">Parking</div>
+                            <ul class="body">
+                              <li>Free parking at the hotel</li>
+                            </ul>
+                          </div>
+                          <div class="detail-item col-sm-6">
+                            <div class="head">Catering</div>
+                            <ul class="body">
+                              <li>Room service</li>
+                              <li>Bar - lounge</li>
+                              <li>Restaurant</li>
+                            </ul>
+                          </div>
+                          <div class="detail-item col-sm-6">
+                            <div class="head">Business Center</div>
+                            <ul class="body">
+                              <li>Audio and video equipment</li>
+                              <li>Internet Access</li>
+                              <li>Photo copying service</li>
+                              <li>Printers</li>
+                              <li>Fax</li>
+                              <li>Tea and coffee trays</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#hi-hotel-detail" href="#photos">
+                          Photos
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="photos" class="panel-collapse collapse">
+                      <div class="panel-body">
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- end of overlay -->
     <div id="hi-big-header" style="background-image: url(https://d3ehecxdotm942.cloudfront.net/61ccb696986954abbe14bce266a373a7/aa/a6/aaa6cfab15f7cc174a75c9d869bac76b-w1920-h320.jpg);">
       <div id="hi-top-toolbar" class="container-fluid">
         <div class="col-xs-6">
           <div class="pull-left visible-xs">
-            <a href="javascript:;" class="btn btn-link btn-lg font-white"><i class="fa fa-info-circle"></i><span class="sr-only">Information</span></a>
+            <a href="javascript:;" data-toggle="modal" data-target="#hi-hotel-info" class="btn btn-link btn-lg font-white"><i class="fa fa-info-circle"></i><span class="sr-only">Information</span></a>
           </div>
         </div>
         <div class="col-xs-6">
@@ -49,7 +246,7 @@
           </h3>
         </div>
         <div class="col-md-12 text-center">
-          <a href="javascript:;" class="btn btn-link btn-lg hidden-xs font-white"><i class="fa fa-info-circle"></i> Hotel Information</a>
+          <a href="javascript:;" data-toggle="modal" data-target="#hi-hotel-info" class="btn btn-link btn-lg hidden-xs font-white"><i class="fa fa-info-circle"></i> Hotel Information</a>
         </div>
       </div>
 
@@ -469,6 +666,7 @@
                   </div>
                 </div>
 
+
                 <div id="room-1-offer-1" class="offer-item">
                   <div class="col-xs-12 row">
                     <h5 class="header font-light font-black col-xs-7">
@@ -812,5 +1010,11 @@
         </div>
       </div>
     </div>
+  </div>
+  <script>
+  (function($){
+
+  })(jQuery)
+  </script>
   </body>
 </html>
