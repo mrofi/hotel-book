@@ -253,15 +253,37 @@ button.button-apply-criteria {
     padding: 0;
 }
 .room-select-item {
-    background-color: #eee;
+    background-color: #fff;
     padding: 5px 0;
     margin: 5px 0;
-    border: 1px dotted #999;
     font-size: .8em;
+}
+.room-select-item .room-title, .room-select-item .price {
+    font-size: 1.3em;
 }
 .room-select-item.non-active {
     padding: 15px 5px;
     text-align: center;
+    background-color: #eee;
+    border: 1px dotted #999;
+}
+.total-detail.panel-item {
+    background-color: #eee;
+}
+.total-detail-item {
+    font-size: .8em;
+    padding: 0 0 10px;
+}
+.total-detail-item.total {
+    font-size: 1em;
+    padding: 25px 0;
+}
+.total .in-usd {
+    line-height: 1em;
+}
+.price-nomimal.bigger {
+    font-size: 1.4em;
+    line-height: 1em;
 }
 .room-select.panel-item {
     padding: 5px 0!important;
@@ -295,7 +317,69 @@ button.button-apply-criteria {
     cursor: pointer;
 }
 
+/*overlay*/
+#hi-hotel-info.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #222;
+    position: fixed;
+    z-index: 455555;
+    padding: 0px;
+    margin: 0px;
+    top: 0;
+    color: #fff;
+}
 
+.info-container {
+    overflow-y: overlay;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#hi-hotel-info .container-fluid {
+    position: absolute;
+    width: 100%;
+}
+#hi-hotel-detail .panel {
+    border-top: 1px solid #fff;
+}
+#hi-hotel-detail .panel-title {
+    color: #fff;
+    font-size: 1.7em;
+    font-weight: 200;
+}
+.panel .detail-item {
+    font-size: 1.1em;
+    color: #aaa;
+}
+.panel .detail-item.title {
+    color: #fff;
+    margin: 20px 0;
+}
+.panel-body>.detail-item-list {
+    margin-top: 20px;
+}
+#equipments .detail-item .head {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+#equipments .detail-item .body {
+    list-style: none;
+    padding: 0;
+}
+.close-detail {
+    position: absolute;
+    right: 30px;
+    font-size: 3em;
+    line-height: .8em;
+    z-index: 9;
+}
+#map-canvas {
+    height: 700px;
+
+}
 
 /*in table and up*/
 @media (min-width: 768px) {

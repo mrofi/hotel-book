@@ -11,6 +11,7 @@
     <link rel="bookmark" href="favicon_16.ico"/>
     <!-- site css -->
     <link rel="stylesheet" href="css/site.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
@@ -20,6 +21,7 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
     <script type="text/javascript" src="js/site.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script>
       var map;
@@ -336,13 +338,13 @@
                   <div class="font-bold">
                     <i class="fa fa-calendar"></i> Arrival
                   </div>
-                  <input type="date" class="form-control font-light">
+                  <input type="text" class="datepicker form-control font-light">
                 </div>
                 <div class="col-sm-6 form-group date-display">
                   <div class="font-bold">
                     <i class="fa fa-calendar"></i> Departure
                   </div>
-                  <input type="date" class="form-control font-light">
+                  <input type="text" class="datepicker form-control font-light">
                 </div>
               </div>
               <div class="col-md-5 form-group visible-md visible-lg">
@@ -1013,7 +1015,7 @@
   </div>
   <script>
   (function($){
-
+    $('.datepicker').datepicker();
   })(jQuery)
   </script>
   </body>
